@@ -3,6 +3,7 @@ package org.ntutssl.shapes;
 public final class Definitions
 {
     public static String CIRCLE = "Circle";
+    public static String RECTANGLE = "Rectangle";
     public static String SPACE = " ";
 
     private Definitions()
