@@ -14,6 +14,10 @@ public class Triangle implements Measurable
         {
             throw new NullPointerException( ERROR_VERTICES_IS_NULL );
         }
+        if ( vertices.size() != 3 )
+        {
+            throw new IllegalArgumentException( TriangleHelper.ERROR_VERTICES_IS_NOT_OF_SIZE_THREE );
+        }
         if ( !TriangleHelper.IsVerticesThatCanFormATriangle( vertices ) )
         {
             throw new IllegalArgumentException( ERROR_VERTICES_CANNOT_FORM_A_TRIANGLE );

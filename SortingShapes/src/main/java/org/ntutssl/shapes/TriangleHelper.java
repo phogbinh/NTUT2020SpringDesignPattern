@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public final class TriangleHelper
 {
-    private static String ERROR_VERTICES_IS_NOT_OF_SIZE_THREE = "The given vertices is not of size three";
+    public static String ERROR_VERTICES_IS_NOT_OF_SIZE_THREE = "The given vertices is not of size three";
 
     private TriangleHelper()
     {
