@@ -37,7 +37,10 @@ public class TwoDimensionalVector
         return _y;
     }
 
-    public String toString();
+    public String toString()
+    {
+        return Definitions.OPENING_BRACKET + _x + Definitions.COMMA + _y + Definitions.CLOSING_BRACKET;
+    }
 
     public double getLength()
     {

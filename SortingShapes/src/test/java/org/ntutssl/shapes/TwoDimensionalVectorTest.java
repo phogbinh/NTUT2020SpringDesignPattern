@@ -87,4 +87,11 @@ public class TwoDimensionalVectorTest
         TwoDimensionalVector vector = new TwoDimensionalVector( 3, 4 );
         assertEquals( 5.0, vector.getLength(), TestDefinitions.DOUBLE_DELTA );
     }
+
+    @Test
+    public void test_to_string()
+    {
+        TwoDimensionalVector vector = new TwoDimensionalVector( 3, 0 );
+        assertEquals( "[3,0]", vector.toString() );
+    }
 }
