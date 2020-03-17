@@ -37,11 +37,6 @@ public class TwoDimensionalVector
         return _y;
     }
 
-    public String toString()
-    {
-        return Definitions.OPENING_BRACKET + _x + Definitions.COMMA + _y + Definitions.CLOSING_BRACKET;
-    }
-
     public double getLength()
     {
         return Math.sqrt( _x * _x + _y * _y );
@@ -55,5 +50,10 @@ public class TwoDimensionalVector
     public TwoDimensionalVector divide( int constant )
     {
         return new TwoDimensionalVector( _x / constant, _y / constant );
+    }
+
+    public String toString()
+    {
+        return Definitions.OPENING_BRACKET + _x + Definitions.COMMA + _y + Definitions.CLOSING_BRACKET;
     }
 }
