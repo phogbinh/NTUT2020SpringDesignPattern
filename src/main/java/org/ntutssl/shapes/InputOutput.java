@@ -105,25 +105,32 @@ public class InputOutput
 
     public ArrayList< Measurable > handleSort( ArrayList< Measurable > measurables, String sortingCondition, String sortingOrder )
     {
-        if ( sortingCondition.equals( Definitions.SORTING_CONDITION_AREA ) && sortingOrder.equals( Definitions.SORTING_ORDER_ASCENDING ) )
+        try
         {
-            measurables.sort( Sort.BY_AREA_ASCENDING );
+            if ( sortingCondition.equals( Definitions.SORTING_CONDITION_AREA ) && sortingOrder.equals( Definitions.SORTING_ORDER_ASCENDING ) )
+            {
+                measurables.sort( Sort.BY_AREA_ASCENDING );
+            }
+            else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_AREA ) && sortingOrder.equals( Definitions.SORTING_ORDER_DESCENDING ) )
+            {
+                measurables.sort( Sort.BY_AREA_DESCENDING );
+            }
+            else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_PERIMETER ) && sortingOrder.equals( Definitions.SORTING_ORDER_ASCENDING ) )
+            {
+                measurables.sort( Sort.BY_PERIMETER_ASCENDING );
+            }
+            else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_PERIMETER ) && sortingOrder.equals( Definitions.SORTING_ORDER_DESCENDING ) )
+            {
+                measurables.sort( Sort.BY_PERIMETER_DESCENDING );
+            }
+            else
+            {
+                throw new IllegalArgumentException( SORTING_ARGUMENTS_ARE_INVALID );
+            }
         }
-        else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_AREA ) && sortingOrder.equals( Definitions.SORTING_ORDER_DESCENDING ) )
+        catch ( Exception exception )
         {
-            measurables.sort( Sort.BY_AREA_DESCENDING );
-        }
-        else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_PERIMETER ) && sortingOrder.equals( Definitions.SORTING_ORDER_ASCENDING ) )
-        {
-            measurables.sort( Sort.BY_PERIMETER_ASCENDING );
-        }
-        else if ( sortingCondition.equals( Definitions.SORTING_CONDITION_PERIMETER ) && sortingOrder.equals( Definitions.SORTING_ORDER_DESCENDING ) )
-        {
-            measurables.sort( Sort.BY_PERIMETER_DESCENDING );
-        }
-        else
-        {
-            throw new IllegalArgumentException( SORTING_ARGUMENTS_ARE_INVALID );
+            /* Body intentionally empty */
         }
         return measurables;
     }
