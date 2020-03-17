@@ -44,10 +44,10 @@ public class Triangle implements Measurable
     {
         return  Definitions.TRIANGLE
             +   Definitions.SPACE
-            +   Definitions.OPENING_BRACKET + _vertices.get( 0 ).getX() + Definitions.COMMA + _vertices.get( 0 ).getY() + Definitions.CLOSING_BRACKET
+            +   _vertices.get( 0 ).toString()
             +   Definitions.SPACE
-            +   Definitions.OPENING_BRACKET + _vertices.get( 1 ).getX() + Definitions.COMMA + _vertices.get( 1 ).getY() + Definitions.CLOSING_BRACKET
+            +   _vertices.get( 1 ).toString()
             +   Definitions.SPACE
-            +   Definitions.OPENING_BRACKET + _vertices.get( 2 ).getX() + Definitions.COMMA + _vertices.get( 2 ).getY() + Definitions.CLOSING_BRACKET;
+            +   _vertices.get( 2 ).toString();
     }
 }
