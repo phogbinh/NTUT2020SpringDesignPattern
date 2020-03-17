@@ -11,11 +11,6 @@ public final class TriangleHelper
         /* Body intentionally empty */
     }
 
-    public static boolean IsVerticesThatCanFormATriangle( ArrayList< TwoDimensionalVector > vertices )
-    {
-        return getAreaOfThreeVertices( vertices ) != 0.0;
-    }
-
     public static double getAreaOfThreeVertices( ArrayList< TwoDimensionalVector > vertices )
     {
         if ( vertices.size() != 3 )

@@ -18,7 +18,8 @@ public class Triangle implements Measurable
         {
             throw new IllegalArgumentException( TriangleHelper.ERROR_VERTICES_IS_NOT_OF_SIZE_THREE );
         }
-        if ( !TriangleHelper.IsVerticesThatCanFormATriangle( vertices ) )
+        // Throw an exception if the three given vertices cannot form a triangle.
+        if ( TriangleHelper.getAreaOfThreeVertices( vertices ) == 0.0 )
         {
             throw new IllegalArgumentException( ERROR_VERTICES_CANNOT_FORM_A_TRIANGLE );
         }
