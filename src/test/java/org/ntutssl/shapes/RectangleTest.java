@@ -75,14 +75,14 @@ public class RectangleTest
     public void test_area_of_rectangle_of_length_3_and_width_2_being_6()
     {
         Rectangle rectangle = new Rectangle( 3.0, 2.0 );
-        assertEquals( 6.0, rectangle.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 6.0, rectangle.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
     public void test_perimeter_of_rectangle_of_length_1_and_width_4_being_10()
     {
         Rectangle rectangle = new Rectangle( 1.0, 4.0 );
-        assertEquals( 10.0, rectangle.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 10.0, rectangle.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test

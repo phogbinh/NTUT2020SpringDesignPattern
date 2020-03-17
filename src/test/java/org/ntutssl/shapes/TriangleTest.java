@@ -83,7 +83,7 @@ public class TriangleTest
         vertices.add( new TwoDimensionalVector( 4, 3 ) );
         vertices.add( new TwoDimensionalVector( 0, 3 ) );
         Triangle triangle = new Triangle( vertices );
-        assertEquals( 6.0, triangle.getArea(), TestDefinitions.DOUBLE_DELTA);
+        assertEquals( 6.0, triangle.area(), TestDefinitions.DOUBLE_DELTA);
     }
 
     @Test
@@ -94,7 +94,7 @@ public class TriangleTest
         vertices.add( new TwoDimensionalVector( 0, 0 ) );
         vertices.add( new TwoDimensionalVector( 4, 0 ) );
         Triangle triangle = new Triangle( vertices );
-        assertEquals( 12.0, triangle.getPerimeter(), TestDefinitions.DOUBLE_DELTA);
+        assertEquals( 12.0, triangle.perimeter(), TestDefinitions.DOUBLE_DELTA);
     }
 
     @Test

@@ -50,14 +50,14 @@ public class CircleTest
     public void test_area_of_circle_of_radius_10_being_314point159()
     {
         Circle circle = new Circle( 10.0 );
-        assertEquals( 314.159, circle.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 314.159, circle.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
     public void test_perimeter_of_circle_of_radius_5_being_34point315()
     {
         Circle circle = new Circle( 5.0 );
-        assertEquals( 31.415, circle.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 31.415, circle.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test

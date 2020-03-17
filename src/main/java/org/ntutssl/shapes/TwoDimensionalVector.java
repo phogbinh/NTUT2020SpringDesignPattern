@@ -39,7 +39,7 @@ public class TwoDimensionalVector
         return _y;
     }
 
-    public double getLength()
+    public double length()
     {
         return Math.sqrt( _x * _x + _y * _y );
     }
@@ -65,5 +65,20 @@ public class TwoDimensionalVector
     public String toString()
     {
         return Definitions.OPENING_BRACKET + _x + Definitions.COMMA + _y + Definitions.CLOSING_BRACKET;
+    }
+
+    public int dot( TwoDimensionalVector rightVector )
+    {
+        return _x * rightVector._x + _y * rightVector._y;
+    }
+
+    public int cross( TwoDimensionalVector rightVector )
+    {
+        return _x * rightVector._y - rightVector._x * _y;
+    }
+
+    public TwoDimensionalVector subtract( TwoDimensionalVector rightVector )
+    {
+        return new TwoDimensionalVector( _x - rightVector._x, _y - rightVector._y );
     }
 }

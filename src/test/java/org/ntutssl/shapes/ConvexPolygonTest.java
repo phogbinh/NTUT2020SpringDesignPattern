@@ -103,7 +103,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 0, 2 ) );
         vertices.add( new TwoDimensionalVector( -1, 0 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 2.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 2.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -115,7 +115,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( -1, -1 ) );
         vertices.add( new TwoDimensionalVector( 1, -1 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 4.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 4.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -127,7 +127,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 1, 1 ) );
         vertices.add( new TwoDimensionalVector( 2, 1 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 1.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 1.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -139,7 +139,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 0, 2 ) );
         vertices.add( new TwoDimensionalVector( 1, 0 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 4.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 4.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -151,7 +151,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 7, -10 ) );
         vertices.add( new TwoDimensionalVector( 12, -7 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 63.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 63.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -164,7 +164,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 5, 7 ) );
         vertices.add( new TwoDimensionalVector( 9, -3 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 194.0, convexPolygon.getArea(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 194.0, convexPolygon.area(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -175,7 +175,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 0, 2 ) );
         vertices.add( new TwoDimensionalVector( -1, 0 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 6.472, convexPolygon.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 6.472, convexPolygon.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -187,7 +187,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( -1, -1 ) );
         vertices.add( new TwoDimensionalVector( 1, -1 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 8.0, convexPolygon.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 8.0, convexPolygon.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -199,7 +199,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 1, 1 ) );
         vertices.add( new TwoDimensionalVector( 2, 1 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 4.0, convexPolygon.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 4.0, convexPolygon.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test
@@ -211,7 +211,7 @@ public class ConvexPolygonTest
         vertices.add( new TwoDimensionalVector( 0, 2 ) );
         vertices.add( new TwoDimensionalVector( 1, 0 ) );
         ConvexPolygon convexPolygon = new ConvexPolygon( vertices );
-        assertEquals( 8.944, convexPolygon.getPerimeter(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 8.944, convexPolygon.perimeter(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test

@@ -14,7 +14,7 @@ public class Sort
         @Override
         public int compare( Measurable a, Measurable b )
         {
-            return a.getArea() < b.getArea() ? -1 : a.getArea() == b.getArea() ? 0 : 1;
+            return a.area() < b.area() ? -1 : a.area() == b.area() ? 0 : 1;
         }
     }
 
@@ -23,7 +23,7 @@ public class Sort
         @Override
         public int compare( Measurable a, Measurable b )
         {
-            return a.getArea() > b.getArea() ? -1 : a.getArea() == b.getArea() ? 0 : 1;
+            return a.area() > b.area() ? -1 : a.area() == b.area() ? 0 : 1;
         }
     }
 
@@ -32,7 +32,7 @@ public class Sort
         @Override
         public int compare( Measurable a, Measurable b )
         {
-            return a.getPerimeter() < b.getPerimeter() ? -1 : a.getPerimeter() == b.getPerimeter() ? 0 : 1;
+            return a.perimeter() < b.perimeter() ? -1 : a.perimeter() == b.perimeter() ? 0 : 1;
         }
     }
 
@@ -41,7 +41,7 @@ public class Sort
         @Override
         public int compare( Measurable a, Measurable b )
         {
-            return a.getPerimeter() > b.getPerimeter() ? -1 : a.getPerimeter() == b.getPerimeter() ? 0 : 1;
+            return a.perimeter() > b.perimeter() ? -1 : a.perimeter() == b.perimeter() ? 0 : 1;
         }
     }
 }

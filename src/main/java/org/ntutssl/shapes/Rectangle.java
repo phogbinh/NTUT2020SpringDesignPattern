@@ -21,12 +21,12 @@ public class Rectangle implements Measurable
         _width = width;
     }
 
-    public double getArea()
+    public double area()
     {
         return _length * _width;
     }
 
-    public double getPerimeter()
+    public double perimeter()
     {
         return 2.0 * ( _length + _width );
     }

@@ -14,12 +14,12 @@ public class Circle implements Measurable
         _radius = radius;
     }
 
-    public double getArea()
+    public double area()
     {
         return _radius * _radius * Math.PI;
     }
 
-    public double getPerimeter()
+    public double perimeter()
     {
         return _radius * 2.0 * Math.PI;
     }

@@ -96,7 +96,7 @@ public class InputOutput
         return vertices;
     }
 
-    public void handleSort( ArrayList< Measurable > measurables, String sortingCondition, String sortingOrder )
+    public ArrayList< Measurable > handleSort( ArrayList< Measurable > measurables, String sortingCondition, String sortingOrder )
     {
         if ( sortingCondition.equals( Definitions.SORTING_CONDITION_AREA ) && sortingOrder.equals( Definitions.SORTING_ORDER_ASCENDING ) )
         {
@@ -118,6 +118,7 @@ public class InputOutput
         {
             throw new IllegalArgumentException( SORTING_ARGUMENTS_ARE_INVALID );
         }
+        return measurables;
     }
 
     public void handleOutput( ArrayList< Measurable > measurables, String outputFileName)

@@ -27,7 +27,7 @@ public class ConvexPolygon implements Measurable
         _vertices = ConvexPolygonHelper.getVerticesSortedInAscendingOrderByDirectedAnglesFromReferenceVectorToVectorGoingFromCentroidToThem( vertices );
     }
 
-    public double getArea()
+    public double area()
     {
         double area = 0.0;
         for ( int index = 1; index < _vertices.size() - 1; index++ )
@@ -41,14 +41,14 @@ public class ConvexPolygon implements Measurable
         return area;
     }
 
-    public double getPerimeter()
+    public double perimeter()
     {
         double perimeter = 0.0;
         for ( int index = 1; index < _vertices.size() ; index++ )
         {
-            perimeter += ( new TwoDimensionalVector( _vertices.get( index - 1 ), _vertices.get( index ) ) ).getLength();
+            perimeter += ( new TwoDimensionalVector( _vertices.get( index - 1 ), _vertices.get( index ) ) ).length();
         }
-        perimeter += ( new TwoDimensionalVector( _vertices.get( _vertices.size() - 1 ), _vertices.get( 0 ) ) ).getLength();
+        perimeter += ( new TwoDimensionalVector( _vertices.get( _vertices.size() - 1 ), _vertices.get( 0 ) ) ).length();
         return perimeter;
     }
 

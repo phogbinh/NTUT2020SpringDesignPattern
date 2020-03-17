@@ -25,16 +25,16 @@ public class Triangle implements Measurable
         _vertices = vertices;
     }
 
-    public double getArea()
+    public double area()
     {
         return TriangleHelper.getAreaOfThreeVertices( _vertices );
     }
 
-    public double getPerimeter()
+    public double perimeter()
     {
-        double lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndOne = ( new TwoDimensionalVector( _vertices.get( 0 ), _vertices.get( 1 ) ) ).getLength();
-        double lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndTwo = ( new TwoDimensionalVector( _vertices.get( 0 ), _vertices.get( 2 ) ) ).getLength();
-        double lengthOfTriangleSideWhoseEndpointsAreVerticesOneAndTwo = ( new TwoDimensionalVector( _vertices.get( 1 ), _vertices.get( 2 ) ) ).getLength();
+        double lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndOne = ( new TwoDimensionalVector( _vertices.get( 0 ), _vertices.get( 1 ) ) ).length();
+        double lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndTwo = ( new TwoDimensionalVector( _vertices.get( 0 ), _vertices.get( 2 ) ) ).length();
+        double lengthOfTriangleSideWhoseEndpointsAreVerticesOneAndTwo = ( new TwoDimensionalVector( _vertices.get( 1 ), _vertices.get( 2 ) ) ).length();
         return  lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndOne
             +   lengthOfTriangleSideWhoseEndpointsAreVerticesZeroAndTwo
             +   lengthOfTriangleSideWhoseEndpointsAreVerticesOneAndTwo;

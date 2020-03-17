@@ -85,7 +85,7 @@ public class TwoDimensionalVectorTest
     public void length_of_vector_3_4_being_5()
     {
         TwoDimensionalVector vector = new TwoDimensionalVector( 3, 4 );
-        assertEquals( 5.0, vector.getLength(), TestDefinitions.DOUBLE_DELTA );
+        assertEquals( 5.0, vector.length(), TestDefinitions.DOUBLE_DELTA );
     }
 
     @Test( expected = NullPointerException.class )
