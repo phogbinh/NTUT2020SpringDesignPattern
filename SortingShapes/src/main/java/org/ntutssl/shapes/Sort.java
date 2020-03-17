@@ -1,6 +1,7 @@
 package org.ntutssl.shapes;
 
-public class Sort{
+public class Sort
+{
     public static Comparator<Measurable> BY_AREA_ASCENDING = new ByAreaAscending();
     public static Comparator<Measurable> BY_AREA_DESCENDING = new ByAreaDescending();
     public static Comparator<Measurable> BY_PERIMETER_ASCENDING = new ByPerimeterAscending();
