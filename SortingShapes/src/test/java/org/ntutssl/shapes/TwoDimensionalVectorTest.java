@@ -88,6 +88,34 @@ public class TwoDimensionalVectorTest
         assertEquals( 5.0, vector.getLength(), TestDefinitions.DOUBLE_DELTA );
     }
 
+    @Test( expected = NullPointerException.class )
+    public void test_adding_null_throwing_exception()
+    {
+        ( new TwoDimensionalVector( TestDefinitions.DUMP_INTEGER, TestDefinitions.DUMP_INTEGER ) ).add( null );
+    }
+
+    @Test
+    public void test_adding_vector_3_2_to_vector_1_1_giving_vector_4_3()
+    {
+        TwoDimensionalVector expectedVector = ( new TwoDimensionalVector( 3, 2 ) ).add( new TwoDimensionalVector( 1, 1 ) );
+        assertEquals( 4, expectedVector.getX() );
+        assertEquals( 3, expectedVector.getY() );
+    }
+
+    @Test( expected = ArithmeticException.class )
+    public void test_dividing_by_0_throwing_exception()
+    {
+        ( new TwoDimensionalVector( TestDefinitions.DUMP_INTEGER, TestDefinitions.DUMP_INTEGER ) ).divide( 0 );
+    }
+
+    @Test
+    public void test_dividing_vector_10_5_by_5_giving_vector_2_1()
+    {
+        TwoDimensionalVector expectedVector = ( new TwoDimensionalVector( 10, 5 ) ).divide( 5 );
+        assertEquals( 2, expectedVector.getX() );
+        assertEquals( 1, expectedVector.getY() );        
+    }
+
     @Test
     public void test_to_string()
     {

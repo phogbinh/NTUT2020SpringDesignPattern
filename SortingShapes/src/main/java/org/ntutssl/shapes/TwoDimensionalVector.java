@@ -4,6 +4,8 @@ public class TwoDimensionalVector
 {
     private final String ERROR_STARTING_VERTEX_IS_NULL = "The given starting vertex is null";
     private final String ERROR_ENDING_VERTEX_IS_NULL = "The given ending vertex is null";
+    private final String ERROR_RIGHT_VECTOR_IS_NULL = "The given right vector is null";
+    private final String ERROR_CONSTANT_IS_ZERO = "The given constant is zero";
     private int _x;
     private int _y;
 
@@ -44,11 +46,19 @@ public class TwoDimensionalVector
 
     public TwoDimensionalVector add( TwoDimensionalVector rightVector )
     {
+        if ( rightVector == null )
+        {
+            throw new NullPointerException( ERROR_RIGHT_VECTOR_IS_NULL );
+        }
         return new TwoDimensionalVector( _x + rightVector._x, _y + rightVector._y );
     }
 
     public TwoDimensionalVector divide( int constant )
     {
+        if ( constant == 0 )
+        {
+            throw new ArithmeticException( ERROR_CONSTANT_IS_ZERO );
+        }
         return new TwoDimensionalVector( _x / constant, _y / constant );
     }
 
