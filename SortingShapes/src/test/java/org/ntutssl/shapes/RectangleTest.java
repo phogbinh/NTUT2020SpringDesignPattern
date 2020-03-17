@@ -9,8 +9,8 @@ import org.junit.Test;
 
 public class RectangleTest
 {
-    private String MEMBER_VARIABLE_NAME_LENGTH = "_length";
-    private String MEMBER_VARIABLE_NAME_WIDTH = "_width";
+    private final String MEMBER_VARIABLE_NAME_LENGTH = "_length";
+    private final String MEMBER_VARIABLE_NAME_WIDTH = "_width";
 
     @Test( expected = IllegalArgumentException.class )
     public void test_constructor_setting_length_to_zero_throwing_exception()

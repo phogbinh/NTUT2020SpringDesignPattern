@@ -2,8 +2,8 @@ package org.ntutssl.shapes;
 
 public class Rectangle implements Measurable
 {
-    private String ERROR_LENGTH_IS_NONPOSITIVE = "The given length is nonpositive";
-    private String ERROR_WIDTH_IS_NONPOSITIVE = "The given width is nonpositive";
+    private final String ERROR_LENGTH_IS_NONPOSITIVE = "The given length is nonpositive";
+    private final String ERROR_WIDTH_IS_NONPOSITIVE = "The given width is nonpositive";
     private double _length;
     private double _width;
 

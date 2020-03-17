@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class CircleTest
 {
-    private String MEMBER_VARIABLE_NAME_RADIUS = "_radius";
+    private final String MEMBER_VARIABLE_NAME_RADIUS = "_radius";
 
     @Test( expected = IllegalArgumentException.class )
     public void test_constructor_setting_radius_to_zero_throwing_exception()
