@@ -2,7 +2,7 @@ package org.ntutssl.shapes;
 
 public class Circle implements Measurable
 {
-    private final String ERROR_RADIUS_IS_NONPOSITIVE = "The given radius is nonpositive";
+    private final String ERROR_RADIUS_IS_NONPOSITIVE = "It's not a circle!";
     private double _radius;
 
     public Circle( double radius )

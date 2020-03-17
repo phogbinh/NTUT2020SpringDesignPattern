@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Triangle implements Measurable
 {
-    private final String ERROR_VERTICES_CANNOT_FORM_A_TRIANGLE = "The given vertices cannot form a triangle";
+    private final String ERROR_VERTICES_CANNOT_FORM_A_TRIANGLE = "It's not a triangle!";
     private ArrayList< TwoDimensionalVector > _vertices;
 
     public Triangle( ArrayList< TwoDimensionalVector > vertices )

@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class ConvexPolygon implements Measurable
 {
     private final String ERROR_VERTICES_IS_OF_SIZE_SMALLER_THAN_THREE = "The given vertices is of size smaller than 3";
-    private final String ERROR_VERTICES_ARE_NEITHER_IN_CLOCKWISE_NOR_COUNTERCLOCKWISE_ORDER = "The given vertices are neither in clockwise nor in counterclockwise order";
+    private final String ERROR_VERTICES_ARE_NEITHER_IN_CLOCKWISE_NOR_COUNTERCLOCKWISE_ORDER = "It's not a convex polygon!";
+    private ArrayList< TwoDimensionalVector > _initialVertices;
     private ArrayList< TwoDimensionalVector > _vertices;
 
     public ConvexPolygon( ArrayList< TwoDimensionalVector > vertices )
@@ -24,6 +25,7 @@ public class ConvexPolygon implements Measurable
             throw new IllegalArgumentException( ERROR_VERTICES_ARE_NEITHER_IN_CLOCKWISE_NOR_COUNTERCLOCKWISE_ORDER );
         }
         // TODO: Throw an exception if the given vertices cannot form a convex polygon.
+        _initialVertices = vertices;
         _vertices = ConvexPolygonHelper.getVerticesSortedInAscendingOrderByDirectedAnglesFromReferenceVectorToVectorGoingFromCentroidToThem( vertices );
     }
 
@@ -55,9 +57,9 @@ public class ConvexPolygon implements Measurable
     public String toString()
     {
         String result = Definitions.CONVEX_POLYGON;
-        for ( int index = 0; index < _vertices.size(); index++ )
+        for ( int index = 0; index < _initialVertices.size(); index++ )
         {
-            result += Definitions.SPACE + _vertices.get( index ).toString();
+            result += Definitions.SPACE + _initialVertices.get( index ).toString();
         }
         return result;
     }

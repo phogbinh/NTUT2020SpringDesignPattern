@@ -29,7 +29,14 @@ public class InputOutput
             String line;
             while ( ( line = bufferReader.readLine() ) != null)
             {
-                measurables.add( createMeasurableFromInputLine( line ) );
+                try
+                {
+                    measurables.add( createMeasurableFromInputLine( line ) );
+                }
+                catch ( Exception exception )
+                {
+                    /* Body intentionally empty */
+                }
             }
             fileReader.close();
         }
