@@ -3,6 +3,7 @@ package org.ntutssl.shapes;
 public final class Definitions
 {
     public static String CIRCLE = "Circle";
+    public static String CONVEX_POLYGON = "ConvexPolygon";
     public static String RECTANGLE = "Rectangle";
     public static String TRIANGLE = "Triangle";
     public static String CLOSING_BRACKET = "]";

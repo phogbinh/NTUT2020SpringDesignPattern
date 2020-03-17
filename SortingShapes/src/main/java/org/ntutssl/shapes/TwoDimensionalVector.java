@@ -47,9 +47,13 @@ public class TwoDimensionalVector
         return Math.sqrt( _x * _x + _y * _y );
     }
 
-    public int dot(TwoDimensionalVector v);
+    public TwoDimensionalVector add( TwoDimensionalVector rightVector )
+    {
+        return new TwoDimensionalVector( _x + rightVector._x, _y + rightVector._y );
+    }
 
-    public int cross(TwoDimensionalVector v);
-
-    public TwoDimensionalVector subtract(TwoDimensionalVector v);
+    public TwoDimensionalVector divide( int constant )
+    {
+        return new TwoDimensionalVector( _x / constant, _y / constant );
+    }
 }
