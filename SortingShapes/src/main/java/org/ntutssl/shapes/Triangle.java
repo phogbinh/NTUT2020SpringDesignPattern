@@ -42,12 +42,11 @@ public class Triangle implements Measurable
 
     public String toString()
     {
-        return  Definitions.TRIANGLE
-            +   Definitions.SPACE
-            +   _vertices.get( 0 ).toString()
-            +   Definitions.SPACE
-            +   _vertices.get( 1 ).toString()
-            +   Definitions.SPACE
-            +   _vertices.get( 2 ).toString();
+        String result = Definitions.TRIANGLE;
+        for ( int index = 0; index < _vertices.size(); index++ )
+        {
+            result += Definitions.SPACE + _vertices.get( index ).toString();
+        }
+        return result;
     }
 }
