@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Triangle implements Measurable
 {
-    private final String ERROR_VERTICES_IS_NULL = "The given vertices is null.";
     private final String ERROR_VERTICES_CANNOT_FORM_A_TRIANGLE = "The given vertices cannot form a triangle";
     private ArrayList< TwoDimensionalVector > _vertices;
 
@@ -12,7 +11,7 @@ public class Triangle implements Measurable
     {
         if ( vertices == null )
         {
-            throw new NullPointerException( ERROR_VERTICES_IS_NULL );
+            throw new NullPointerException( Definitions.ERROR_VERTICES_IS_NULL );
         }
         if ( vertices.size() != 3 )
         {

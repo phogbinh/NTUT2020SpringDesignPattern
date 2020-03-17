@@ -10,6 +10,8 @@ public final class Definitions
     public static String OPENING_BRACKET = "[";
     public static String SPACE = " ";
 
+    public static String ERROR_VERTICES_IS_NULL = "The given vertices is null.";
+
     private Definitions()
     {
         /* Body intentionally empty */

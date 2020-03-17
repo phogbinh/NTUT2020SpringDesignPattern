@@ -13,6 +13,10 @@ public final class TriangleHelper
 
     public static double getAreaOfThreeVertices( ArrayList< TwoDimensionalVector > vertices )
     {
+        if ( vertices == null )
+        {
+            throw new NullPointerException( Definitions.ERROR_VERTICES_IS_NULL );
+        }
         if ( vertices.size() != 3 )
         {
             throw new IllegalArgumentException( ERROR_VERTICES_IS_NOT_OF_SIZE_THREE );
